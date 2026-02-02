@@ -18,7 +18,7 @@ while (running)
     Console.WriteLine("6. Exit");
 
     Console.Write("Choose an option: ");
-    int choice = int.Parse(Console.ReadLine());
+    int choice = int.Parse(Console.ReadLine()); 
 
 
     if (choice == 1)
@@ -26,7 +26,7 @@ while (running)
                     Console.Write("Enter book title: ");
                     string title = Console.ReadLine();
 
-                    Console.Write("Enter author (leave empty if unknown): ");
+                    Console.Write("Enter author  ");
                     string author = Console.ReadLine();
 
                     if (string.IsNullOrWhiteSpace(title))
