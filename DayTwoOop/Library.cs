@@ -30,31 +30,6 @@ namespace DayTwoOop
             }
         }
 
-        public void IssueBookByTitle(string title)
-        {
-            Book found = FindBookByTitle(title);
-
-            if (found == null)
-            {
-                Console.WriteLine("Book not found.");
-                return;
-            }
-
-            found.IssueBook();
-        }
-
-        public void ReturnBookByTitle(string title)
-        {
-            Book found = FindBookByTitle(title);
-
-            if (found == null)
-            {
-                Console.WriteLine("Book not found.");
-                return;
-            }
-
-            found.ReturnBook();
-        }
 
         private Book FindBookByTitle(string title)
         {
@@ -67,6 +42,35 @@ namespace DayTwoOop
             }
             return null;
         }
+
+
+        public void IssueBookByTitle(string title)
+        {
+            var found = FindBookByTitle(title);
+
+            if (found == null)
+            {
+                Console.WriteLine("Book not found.");
+                return;
+            }
+
+            found.IssueBook();
+        }
+
+        public void ReturnBookByTitle(string title)
+        {
+            var found = FindBookByTitle(title);
+
+            if (found == null)
+            {
+                Console.WriteLine("Book not found.");
+                return;
+            }
+
+            found.ReturnBook();
+        }
+
+        
 
 
     }
